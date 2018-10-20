@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1539870918 source:c:\users\ncy\desktop\code\pta 2.6 input sp\main.c
+	<stdio.h>
+	<stdlib.h>
+

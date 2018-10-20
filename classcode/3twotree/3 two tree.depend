@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1539869391 source:c:\users\ncy\desktop\code\3 two tree\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1539869391 source:c:\users\ncy\desktop\datastruct\classcode\3 two tree\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1539869391 source:c:\users\ncy\desktop\datastruct\classcode\3twotree\main.c
+	<stdio.h>
+	<stdlib.h>
+
