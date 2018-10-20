@@ -43,6 +43,25 @@ void insert(linkqueue q,int a)
     //之后，q的地址改变
 
 }
+
+
+int iskong(linkqueue q)
+{
+
+    if (q->front == q->rear)
+    {
+       return Null;
+
+    }
+    else
+        return 1;
+}
+
+
+
+
+
+
 int delete (linkqueue q)
 {
     int a;
@@ -130,18 +149,36 @@ int build(Tree t[])
 
 void printyezi(Tree t[],int root)
 {
-    if (root = Null)
+    int biaozhi = 1;
+    if (root == Null)
         return;
     struct Qnode q;
      q = creatqueue();
      insert(&q,root);
-    while(delete (&q)!=Null)
+    while(iskong(&q)!=Null)
     {
+        root = delete (&q) ;
+        if(biaozhi)
+        {
+           if(t[root].left == Null && t[root].right == Null)
+           {
+               printf("%d",root);
+               biaozhi = 0;
+           }
 
+        }
+    else
+    {
+        if(t[root].left == Null && t[root].right == Null)
+        printf(" %d",root);
     }
 
+    if(t[root].left!= Null)
+        insert(&q,t[root].left);
+    if(t[root].right != Null)
+        insert(&q,t[root].right);
 
-
+    }
 }
 
 
@@ -159,6 +196,6 @@ int main()
     root = build(tt);
     printyezi(tt,root);
 
-    printf("%d",root);
+    //printf("%d",root);
     return 0;
 }
